@@ -31,20 +31,21 @@ header p {
 
 /* Gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* space between images */
+  padding: 40px 20px;
 }
 
 /* Images */
 .gallery img {
-  width: 100%;
-  border-radius: 10px;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
-  cursor: pointer;
+  width: 90%;
+  max-width: 900px; /* keeps it clean */
+  height: auto;
+  border-radius: 12px;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 /* Stagger effect */
@@ -59,10 +60,8 @@ header p {
 
 /* Hover */
 .gallery img:hover {
-  transform: scale(1.05);
-  transition: 0.3s ease;
+  transform: scale(1.02);
 }
-
 /* Animations */
 @keyframes fadeUp {
   to {
